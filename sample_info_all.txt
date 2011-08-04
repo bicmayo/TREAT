@@ -1,0 +1,2 @@
+sampleA=sampleA_R1.fastq	sampleA_R2.fastq
+sampleB=sampleB_R1.fastq	sampleB_R2.fastq

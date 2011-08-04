@@ -1,0 +1,2 @@
+sampleA=sampleA.bam
+sampleB=sampleB.bam

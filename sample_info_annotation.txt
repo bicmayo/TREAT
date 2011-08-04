@@ -1,0 +1,4 @@
+SNV:sampleA=sampleA.snv.txt
+INDEL:sampleA=sampleA.indel.txt
+SNV:sampleB=sampleB.snv.txt
+INDEL:sampleB=sampleB.indel.txt

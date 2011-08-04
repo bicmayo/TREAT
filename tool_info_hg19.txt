@@ -1,0 +1,42 @@
+## path to all the tools and references to run workflow
+  
+## references
+
+BWA_REF=/data2/bsi/RandD/GATK/resources/bwa/allchr_hg19.fa
+BOWTIE_REF=/data2/bsi/RandD/GATK/resources/bowtie/allchr_hg19.fa
+REF_GENOME=/data2/bsi/RandD/GATK/resources/allchr_hg19.fa
+SIFT_REF=/projects/bsi/bictools/apps/variant_detection/sift/4.0.3/db/Human_db_37/
+dbSNP_REF=/data2/bsi/RandD/GATK/resources/dbSNP132_modified.vcf
+CAPTUREKIT=/data4/bsi/refdata/exomeCapture/SureSelect_All_Exon_50mb.bed_Hg19_Oct2010
+ONTARGET=/data4/bsi/refdata/exomeCapture/Agilentv2_ucsc_refflat_hg19_2011-01-24.10bp.merged.bed
+dbSNP_SNV_rsIDs=/data4/bsi/refdata/NCBI/dbsnp/UCSCdbSNP132.single
+KGENOME=/data2/bsi/RandD/exome/1kGenome/TREAT_pipeline/hg19/
+GeneIdMap=/data2/bsi/RandD/gene_id_name_mapping.txt
+HAPMAP=/data2/bsi/RandD/exome/hapmap/hg19/
+CODON_REF=/data2/bsi/RandD/exome/codon/percent_codon_syn_usage.txt
+UCSC_TRACKS=/data2/bsi/reference/UCSC/hg19/
+ACC_TO_GENE=/data4/bsi/refdata/NCBI/RefSeq/acc_symbol_match.txt
+UCSC_REF_FLAT=/data4/bsi/refdata/bictools/annotation/UCSC/ucsc_refflat_hg19_2011-01-24.txt
+METACORE_PATHWAY=/data2/bsi/reference/metacore_kegg_pathway_files/
+TISSUE_SPECIFIC=/data2/bsi/reference/Tissue-Specific.Gene.Expression/
+dbSNP_INDEL_rsIDs=/data4/bsi/refdata/NCBI/dbsnp/UCSCdbSNP132.indels
+BGI_REF=/data2/bsi/RandD/bgi_200exome/bedfile/LuCAMP_200exomeFinal_hg19.txt
+COSMIC_INDEL_REF=/data2/bsi/RandD/exome/COSMIC/processed_data/CosmicInsExport_v53_180511_selected_col.tsv
+COSMIC_SNV_REF=/data2/bsi/RandD/exome/COSMIC/processed_data/CosmicMutantExport_v53_180511_selected_col.tsv
+dbSNP_disease_rsIDs=/data4/bsi/refdata/NCBI/dbsnp/UCSCdbSNP132flagged  
+## tools
+
+TREAT_PATH=/projects/bsi/bictools/scripts/exome/treat/3.0/
+BWA=/projects/bsi/bictools/apps/alignment/bwa/0.5.9/
+BOWTIE=/projects/bsi/bictools/apps/alignment/bowtie/0.12.7/
+JAVA=/usr/java/jre1.6.0_18/bin/
+SAMTOOLS=/projects/bsi/bictools/apps/alignment/samtools/samtools-0.1.12a/
+GATK=/projects/bsi/bictools/apps/alignment/GenomeAnalysisTK/1.0.5777/
+SIFT=/projects/bsi/bictools/apps/variant_detection/sift/4.0.3/bin/
+BEDTOOLS=/projects/bsi/bictools/apps/misc/BEDTools/2.7.1/bin/
+SNVmix=/projects/bsi/bictools/apps/variant_detection/SNVMix/0.11.8-r3
+PICARD=/projects/bsi/bictools/apps/alignment/picard/1.47/
+HTTP_SERVER=bmidev2
+FASTQC=/projects/bsi/bictools/apps/qc/FastQC/
+
+

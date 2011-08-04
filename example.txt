@@ -1,0 +1,9 @@
+## example script to run the TREAT workflow
+#1	run info file
+
+$ ~/Treat3.0/treat.sh
+Usage: <run_info file>
+ 
+
+qsub -V -cwd -q 1-day -m ae -M baheti.saurabh@mayo.edu -l h_vmem=4G -l h_stack=10M  /projects/bsi/bictools/scripts/exome/treat/3.0/treat.sh ~/TREAT3.0/run_info_all_hg18.txt
+

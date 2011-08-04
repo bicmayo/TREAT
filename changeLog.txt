@@ -1,0 +1,76 @@
+
+#saurabh baheti
+
+******please see the example configuration, sample info and run info file in the example folder of TREAT to run the workflow*********
+
+06/07/2011 new TREAT 3.0
+	- using newer version of BWA 0.5.9 
+	- no need to run the perl script to add platform and sample information for BWA but we need to run that if we use BOWTIE
+	- (OPTIONAL)before alignement we are converting illumina to sanger qualities using a perl script ill2sanger.pl in each of the alignment sub scripts
+		specifcy a paramter in run info file ILL2SANGER (YES/NO)
+	- (OPTIONAL) mark duplicates uisng PICARD
+		specify  a paramter in run info file MASKDUP (YES/NO)
+	- using newer version of GATK GenomeAnalysisTK-1.0.5777
+	- using newer version of picard
+	- using newer version of bedtool 
+	- sorting the BAM using PICARD as samtools sort dont add a flag for sorting needed when we use PICARD duplicate removal. 	
+	- in place of just rsids from dbsnp the output will include rsID:observedAllele
+	- made changes to parsing script for VCF for both indels and snps as GATK changed the format of the VCF files added more columns (now i cam reading the column header to figure out the column# for teh information we require)
+	- SNV reports are 0 base (VCF output format supports this) 
+	- INDEL reports are 1 base (VCF output format supports this)	
+	- Added column to the OnTarget SNV raw file (last column 0/1) if the call is in the target kit used
+	- Added rsIDs for indels 
+	- Added column to the OnTarget INDEL raw file (last column 0/1) if the call is in the target kit used
+	- Added cosmic data for indels
+	- dbsnp column format changed example:(rsID:observedAllelels)
+	- Using newer reference genome which includes scafold and random regions
+	- adding flag to run info to use TABLE BROWSER and adding he one liner to the generate.html.sh script UPLOAD_TABLEBROWSER=YES/NO	
+	- flag to add port information for table browser PORT=8886
+	- flag to add host information for table brwoser HOST=charlotte
+	- Adding BGI column to the SNV report which has same format as allele frequencies from hapmap and 1kgenome
+	- Adding gene card column as last column to the report
+	- generating sample statistics tab delimited file in the Reports folder i.e. sampleStatistics.tsv
+	- Accepts two formats for variant calls for annotataion module  (SNVmix format or ChrPosRefAlt format , user needs to specify the type in run info file for later user can specify none and for former SNVmix)
+	- checks for quality illumina or sanger and then converts to sanger
+	- check if the BAM is sorted and read group information is there if not then add and sort the same.
+	- running FASTQC is a paramter now if you already have fastq results then need to type in the directory in the run info file
+	- added a new queue in run info file for longer jobs [ LQUEUE=4-days ] 
+
+06/02/2011
+##	- bug fixed in Ontarget INDEL script(it was skipping the first line) - Thanks to Biostat	
+
+	05/18/2011
+##	- added a PERL script to automatically create IGV session during the workflow (create.igv.pl)	
+ 	- change in configuration file UCSC tracks from data2/RandD to data2/refernece
+	- added chrIndex in runinfo file so teh TREAT will work for any number of chr not limited to 1...M
+	- increased number of threads to 4 from 2 to call indels
+	
+05/10/2011
+##	-	bug fixed in OnTarget SNV script (it was skipping first line ) - Thanks to Biostat
+
+
+04/27/2011	
+##	- added -f flag to the SNVmix scipt so as to get all the calls from pileup irrrespective of supported reads for variants	
+
+04/15/2011
+##	- added new sseq submission script 1min lag and works for hg18 and hg19
+	- changed the HTML report format 
+	- added column description ecel sheets
+	- please see the example runinfo file as i made some changes to the same.
+	- added the sampelInformation tab in run info
+
+04/08/2011	
+## 	issues with sseq server, more jobs over loaded the server
+	- added depencenices to job to run one at a time; will slow the annotation process 
+	- adding email notification on completion of workflow
+	
+03/24/2011
+## changes made from Treat0.1
+	- using new 1kgnome data
+	- added columns for UCSSC tracks
+	- fixed the job dependecies issue
+	- using q >= 20 filters on cleaned BAM to call SNVs and Variants
+
+
+
+
