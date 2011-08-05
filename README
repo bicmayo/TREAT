@@ -1,3 +1,4 @@
+
  Targeted RE-sequencing Annotation Tool that offers an comprehensive, open framework, end-to-end solution for analyzing and interpreting targeted re-sequencing data. TREAT encompasses sequence alignment, variant calling, variant annotation, variant filtering, and visualization in one comprehensive analytic workflow. The rich set of annotations provided by TREAT enables the filtering of detected variants based on their functional characteristics, and visualizations at the variant positions allow the investigators to closely examine the identified variants of interest. The source code and the executable of TREAT are available for download. In addition, an Amazon Cloud Image of the TREAT is also provided for researchers with no access to local bioinformatics infrastructures.
 
 contact: hossain.asif@mayo.edu
